@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task 3</title>
+</head>
+<body>
+    <div class="container">
+        <div class="gallery">
+            <div class="big-car-img">
+                <img src="images.jpg" class="big-img">
+            </div>
+            <div class="small-car-img">
+                <img src="images.jpg" class="small-img active">
+                <img src="images (1).jpg" class="small-img">
+                <img src="images (2).jpg" class="small-img">
+                <img src="images (3).jpg" class="small-img">
+            </div>
+        </div>
+
+    </div><script src="jquery-3.7.1.js"></script>
+    <script>
+    $(".small-img").click(function(){
+        $(".small-img").removeClass("active");
+        $(this).addClass("active");
+        let imgSrc = $(this).attr("src");
+        $(".big-img").attr("src" , imgSrc)
+    })
+    </script>
+</body>
+</html>
